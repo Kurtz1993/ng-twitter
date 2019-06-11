@@ -2,14 +2,15 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-login-form',
-  templateUrl: './login-form.component.html',
-  styleUrls: ['./login-form.component.scss']
+  template: `
+    <p>
+      login-form works!
+    </p>
+  `,
+  styleUrls: ['./login-form.component.scss'],
 })
 export class LoginFormComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
