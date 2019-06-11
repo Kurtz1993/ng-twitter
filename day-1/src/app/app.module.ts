@@ -10,10 +10,10 @@ import { LoginFormComponent, RegistrationFormComponent } from './components';
     AppComponent,
     LoginFormComponent,
     RegistrationFormComponent,
-    FormsModule,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
