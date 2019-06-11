@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "aaron-bond.better-comments",
+    "Angular.ng-template",
+    "CoenraadS.bracket-pair-colorizer",
+    "formulahendry.auto-rename-tag",
+    "ionutvmi.path-autocomplete",
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "PKief.material-icon-theme",
+    "msjsdiag.debugger-for-chrome",
+    "natewallace.angular2-inline"
+  ]
+}
