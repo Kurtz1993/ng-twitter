@@ -4,5 +4,8 @@
 </nav>
 
 <div class="user-profile">
-  <span>User profile</span>
+  <a class="menu-item" *ngIf="user; else notLoggedIn">{{ user.name }}</a>
+  <ng-template #notLoggedIn>
+    <a class="menu-item">Login</a>
+  </ng-template>
 </div>
