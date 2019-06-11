@@ -3,9 +3,7 @@ import { RegistrationData } from './models';
 
 @Component({
   selector: 'app-root',
-  template: `
-    <app-registration-form (registration)="registerUser($event)"></app-registration-form>
-  `,
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
