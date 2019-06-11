@@ -16,10 +16,10 @@
     ],
     "paths": {
       "@app/*": [
-        "src/app"
+        "src/app/*"
       ],
       "@assets/*": [
-        "src/assets"
+        "src/assets/*"
       ]
     },
     "lib": [
