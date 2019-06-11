@@ -1,7 +1,10 @@
+@import '../../../assets/_variables';
+
 :host {
   display: block;
   max-width: 400px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
   padding: 2rem 1rem;
   border-radius: 5px;
+  background-color: $background-accent-colour;
 }
