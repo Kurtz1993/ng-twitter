@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { RegistrationData } from './models';
+import { Observable } from 'rxjs';
+
+import { RegistrationData, User } from './models';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +9,7 @@ import { RegistrationData } from './models';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'ng-twitter';
+  user$: Observable<User>;
 
   registerUser(userData: RegistrationData): void {
     console.log(userData);
