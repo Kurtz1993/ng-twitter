@@ -1,0 +1,38 @@
+// Place your settings in this file to overwrite the default settings
+{
+  "debug.openExplorerOnEnd": true,
+  "editor.minimap.enabled": false,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "explorer.openEditors.visible": 0,
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "html.format.wrapLineLength": 100,
+  "html.format.wrapAttributes": "force",
+  "html.format.endWithNewline": true,
+  "html.format.maxPreserveNewLines": 1,
+  "material-icon-theme.activeIconPack": "angular_ngrx",
+  "material-icon-theme.showUpdateMessage": false,
+  "prettier.arrowParens": "avoid",
+  "prettier.eslintIntegration": true,
+  "prettier.trailingComma": "es5",
+  "prettier.printWidth": 100,
+  "typescript.referencesCodeLens.enabled": true,
+  "window.zoomLevel": 0,
+  "workbench.iconTheme": "material-icon-theme",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
+}
