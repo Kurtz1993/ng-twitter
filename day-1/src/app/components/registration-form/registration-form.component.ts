@@ -1,16 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+
+import { RegistrationData } from '../../models';
 
 @Component({
   selector: 'app-registration-form',
-  template: `
-    <p>
-      registration-form works!
-    </p>
-  `,
+  templateUrl: './registration-form.component.html',
   styleUrls: ['./registration-form.component.scss'],
 })
-export class RegistrationFormComponent implements OnInit {
-  constructor() {}
+export class RegistrationFormComponent {
+  @Output()
+  registration = new EventEmitter<RegistrationData>();
 
-  ngOnInit() {}
+  registrationData: RegistrationData = {};
+
+  validateData(formData: RegistrationData): void {
+    if (this.passwordsMatch(formData.password, formData.confirmPassword)) {
+      this.registration.emit(formData);
+    }
+  }
+
+  private passwordsMatch(password: string, confirmPassword: string): boolean {
+    return password === confirmPassword;
+  }
 }
