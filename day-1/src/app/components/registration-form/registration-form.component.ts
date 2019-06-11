@@ -11,7 +11,7 @@ export class RegistrationFormComponent {
   @Output()
   registration = new EventEmitter<RegistrationData>();
 
-  registrationData: RegistrationData = {};
+  registrationData = new RegistrationData();
 
   validateData(formData: RegistrationData): void {
     if (this.passwordsMatch(formData.password, formData.confirmPassword)) {
