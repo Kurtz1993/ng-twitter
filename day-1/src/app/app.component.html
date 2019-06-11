@@ -1,10 +1,9 @@
 <div class="top">
-  <app-top-bar></app-top-bar>
+  <app-top-bar [user]="user$ | async"></app-top-bar>
 </div>
 
 <div class="container">
   <div class="feed"></div>
   <div class="trending"></div>
+  <app-registration-form (registration)="registerUser($event)"></app-registration-form>
 </div>
-
-<app-registration-form (registration)="registerUser($event)"></app-registration-form>
