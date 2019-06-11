@@ -5,8 +5,8 @@ import { TopBarComponent } from './components/top-bar/top-bar.component';
 const CommonComponents = [TopBarComponent];
 
 @NgModule({
-  declarations: [CommonComponents],
+  declarations: [...CommonComponents],
   imports: [CommonModule],
-  exports: [CommonComponents],
+  exports: [...CommonComponents],
 })
 export class SharedModule {}
