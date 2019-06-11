@@ -1,6 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 
-import { RegistrationData } from '../../models';
+import { RegistrationData } from '@app/models';
 
 @Component({
   selector: 'app-registration-form',
