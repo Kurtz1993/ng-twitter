@@ -20,7 +20,7 @@ export class AuthService {
     return this.http
       .post<{ token: string }>(`${environment.apiUrl}/auth`, { email, password })
       .pipe(
-        tap((data: { token: string }) => localStorage.setItem('access_token', data.token)),
+        tap((data: { token: string }) => localStorage.setItem('token', data.token)),
         map(() => null)
       );
   }
