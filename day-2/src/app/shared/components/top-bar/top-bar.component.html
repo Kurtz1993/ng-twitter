@@ -4,7 +4,10 @@
 </nav>
 
 <div class="user-profile">
-  <a class="menu-item" *ngIf="!user; else loggedIn">Login</a>
+  <div class="login-register" *ngIf="!user; else loggedIn">
+    <a class="btn">Login</a> /
+    <a class="btn">Register</a>
+  </div>
   <ng-template #loggedIn>
     <a class="menu-item">{{ user.name }}</a>
     <button class="btn btn-link" (click)="logout.emit()">Logout</button>
