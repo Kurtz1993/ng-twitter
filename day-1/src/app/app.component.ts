@@ -14,4 +14,8 @@ export class AppComponent {
   registerUser(userData: RegistrationData): void {
     console.log(userData);
   }
+
+  logCredentials(userCredentials: RegistrationData): void {
+    console.log(userCredentials);
+  }
 }
