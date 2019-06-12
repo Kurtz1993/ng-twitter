@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 
-import { RegistrationData, User } from './models';
+import { RegistrationData, User, UserCredentials } from './models';
+import { AuthService, UserService } from './services';
 
 @Component({
   selector: 'app-root',
@@ -9,13 +11,25 @@ import { RegistrationData, User } from './models';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  user$: Observable<User>;
+  user: User = this.userService.currentUser;
+
+  constructor(private authService: AuthService, private userService: UserService) {}
 
   registerUser(userData: RegistrationData): void {
-    console.log(userData);
+    this.userService.register(userData).subscribe(() => {
+      // Navigate to the home screen
+    });
   }
 
-  logCredentials(userCredentials: RegistrationData): void {
-    console.log(userCredentials);
+  login(userCredentials: UserCredentials): void {
+    this.authService.login(userCredentials.email, userCredentials.password).subscribe(() => {
+      // Navigate to the home screen
+      this.user = this.userService.currentUser;
+    });
+  }
+
+  logout(): void {
+    this.authService.logout();
+    this.user = null;
   }
 }
