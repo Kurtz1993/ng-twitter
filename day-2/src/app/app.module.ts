@@ -3,14 +3,23 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 import { JwtModule } from '@auth0/angular-jwt';
 
 import { AppComponent } from './app.component';
-import { LoginFormComponent, RegistrationFormComponent } from './components';
 import { SharedModule } from './shared/shared.module';
+import { HomeComponent } from './components/home/home.component';
+import { AuthModule } from '@app/auth/auth.module';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent
+  }
+];
 
 @NgModule({
-  declarations: [AppComponent, LoginFormComponent, RegistrationFormComponent],
+  declarations: [AppComponent, HomeComponent],
   imports: [
     BrowserModule,
     CommonModule,
@@ -24,6 +33,8 @@ import { SharedModule } from './shared/shared.module';
       },
     }),
     SharedModule,
+    RouterModule.forRoot(routes),
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent],

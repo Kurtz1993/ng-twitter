@@ -5,8 +5,8 @@
 
 <div class="user-profile">
   <div class="login-register" *ngIf="!user; else loggedIn">
-    <a class="btn">Login</a> /
-    <a class="btn">Register</a>
+    <a class="btn btn-link" [routerLink]="['/auth/login']">Login</a> /
+    <a class="btn btn-link" [routerLink]="['/auth/register']" >Register</a>
   </div>
   <ng-template #loggedIn>
     <a class="menu-item">{{ user.name }}</a>
