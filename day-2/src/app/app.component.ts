@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
 
 import { RegistrationData, User, UserCredentials } from './models';
 import { AuthService, UserService } from './services';
