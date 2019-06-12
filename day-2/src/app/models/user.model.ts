@@ -1,6 +1,5 @@
 export class User {
-  name?: string;
-  email?: string;
+  constructor(public name?: string, public email?: string) {}
 }
 
 export class RegistrationData extends User {
