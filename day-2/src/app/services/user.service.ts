@@ -12,6 +12,9 @@ import { RegistrationData, User } from '@app/models';
 export class UserService {
   get currentUser(): User {
     const decodedToken = this.jwt.decodeToken(this.jwt.tokenGetter());
+
+    if (!decodedToken) { return null; }
+
     const user = new User(decodedToken.name, decodedToken.email);
 
     return user;
