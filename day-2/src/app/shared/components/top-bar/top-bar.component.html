@@ -1,0 +1,11 @@
+<nav>
+  <a class="menu-item menu-item--active">Home</a>
+  <a class="menu-item">Search</a>
+</nav>
+
+<div class="user-profile">
+  <a class="menu-item" *ngIf="user; else notLoggedIn">{{ user.name }}</a>
+  <ng-template #notLoggedIn>
+    <a class="menu-item">Login</a>
+  </ng-template>
+</div>

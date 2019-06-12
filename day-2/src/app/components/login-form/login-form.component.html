@@ -1,0 +1,25 @@
+<form #loginForm="ngForm" class="login-form" (submit)="login.emit(loginForm.value)">
+  <h1>Login with your account</h1>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input
+      type="email"
+      class="form-control"
+      name="email"
+      [(ngModel)]="userCredentials.email"
+      required
+    />
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input
+      class="form-control"
+      type="password"
+      name="password"
+      [(ngModel)]="userCredentials.password"
+      required
+    />
+  </div>
+
+  <button class="btn btn-primary btn-block" [disabled]="loginForm.invalid">Login</button>
+</form>
