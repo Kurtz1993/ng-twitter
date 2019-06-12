@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Output, Input, EventEmitter } from '@angular/core';
+
 import { User } from '@app/models';
 
 @Component({
@@ -6,11 +7,9 @@ import { User } from '@app/models';
   templateUrl: './top-bar.component.html',
   styleUrls: ['./top-bar.component.scss'],
 })
-export class TopBarComponent implements OnInit {
+export class TopBarComponent {
   @Input()
   user: User;
-
-  constructor() {}
-
-  ngOnInit() {}
+  @Output()
+  logout = new EventEmitter<null>();
 }
