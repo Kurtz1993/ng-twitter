@@ -1,6 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 
-import { RegistrationData } from '@app/models';
+import { UserCredentials } from '@app/models';
 
 @Component({
   selector: 'app-login-form',
@@ -9,7 +9,7 @@ import { RegistrationData } from '@app/models';
 })
 export class LoginFormComponent {
   @Output()
-  login = new EventEmitter<RegistrationData>();
+  login = new EventEmitter<UserCredentials>();
 
-  userCredentials = new RegistrationData();
+  userCredentials = {};
 }
