@@ -8,10 +8,13 @@
 
   &__head {
     margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
   }
 
   &__author {
     font-weight: bold;
+    margin-left: 0.5rem;
   }
 
   &__timestamp {
