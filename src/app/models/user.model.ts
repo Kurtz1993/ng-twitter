@@ -1,4 +1,5 @@
 export class User {
+  gravatar?: string;
   constructor(public name?: string, public email?: string) {}
 }
 
