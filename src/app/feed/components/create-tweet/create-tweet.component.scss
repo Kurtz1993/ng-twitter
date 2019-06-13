@@ -1,0 +1,23 @@
+@import 'variables';
+
+:host {
+  width: 400px;
+}
+
+.create-tweet {
+  padding: 1rem;
+  background-color: $background-accent-colour;
+}
+
+#tweet {
+  resize: none;
+  border: 2px solid $accent-colour !important;
+  background-color: $background-colour;
+  color: white;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
