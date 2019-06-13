@@ -1,0 +1,25 @@
+@import 'variables';
+
+.tweet {
+  background-color: $background-accent-colour;
+  border-bottom: 1px solid rgb(56, 68, 77);
+  padding: 1rem;
+
+  &__head {
+    margin-bottom: 0.8rem;
+  }
+
+  &__author {
+    font-weight: bold;
+  }
+
+  &__timestamp {
+    margin-left: 15px;
+    font-size: 0.8rem;
+    color: #ccc;
+  }
+
+  &__body {
+    font-size: 0.95rem;
+  }
+}
