@@ -15,7 +15,7 @@ export class UserService {
 
     if (!decodedToken) { return null; }
 
-    const user = new User(decodedToken.name, decodedToken.email);
+    const user = new User(decodedToken.name, decodedToken.email, decodedToken.gravatar);
 
     return user;
   }
