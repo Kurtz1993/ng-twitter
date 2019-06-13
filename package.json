@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
     "@auth0/angular-jwt": "^2.1.0",
+    "@kurtz1993/ngx-toasts": "0.0.1",
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
     "date-fns": "^1.30.1",
