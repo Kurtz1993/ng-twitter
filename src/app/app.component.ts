@@ -17,19 +17,6 @@ export class AppComponent {
 
   constructor(private authService: AuthService, private userService: UserService) {}
 
-  ngOnInit() {
-    // throw Error('Just for the lolz');
-    this.userService
-      .register({ email: 'saul2@epam.com', name: 'saul2', password: 'a', confirmPassword: 'a' })
-      .subscribe(() => {
-        // Navigate to the home screen
-      });
-
-    setTimeout(() => {
-      throw new Error('hello darkness my old friend');
-    }, 2000);
-  }
-
   registerUser(userData: RegistrationData): void {
     this.userService.register(userData).subscribe(() => {
       // Navigate to the home screen
