@@ -7,26 +7,17 @@ import { LoginFormComponent, RegistrationFormComponent } from './components';
 
 const routes: Routes = [
   {
-    path: 'auth',
-    children: [
-      {
-        path: 'login',
-        component: LoginFormComponent,
-      },
-      {
-        path: 'register',
-        component: RegistrationFormComponent,
-      },
-    ],
+    path: 'login',
+    component: LoginFormComponent,
+  },
+  {
+    path: 'register',
+    component: RegistrationFormComponent,
   },
 ];
 
 @NgModule({
   declarations: [LoginFormComponent, RegistrationFormComponent],
-  imports: [
-    CommonModule,
-    FormsModule,
-    RouterModule.forChild(routes),
-  ],
+  imports: [CommonModule, FormsModule, RouterModule.forChild(routes)],
 })
 export class AuthModule {}

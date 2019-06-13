@@ -9,9 +9,26 @@ import { AuthService, UserService } from './services';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  user: User = this.userService.currentUser;
+  // user: User = this.userService.currentUser;
+
+  get user(): User {
+    return this.userService.currentUser;
+  }
 
   constructor(private authService: AuthService, private userService: UserService) {}
+
+  ngOnInit() {
+    // throw Error('Just for the lolz');
+    this.userService
+      .register({ email: 'saul2@epam.com', name: 'saul2', password: 'a', confirmPassword: 'a' })
+      .subscribe(() => {
+        // Navigate to the home screen
+      });
+
+    setTimeout(() => {
+      throw new Error('hello darkness my old friend');
+    }, 2000);
+  }
 
   registerUser(userData: RegistrationData): void {
     this.userService.register(userData).subscribe(() => {
@@ -22,12 +39,12 @@ export class AppComponent {
   login(userCredentials: UserCredentials): void {
     this.authService.login(userCredentials.email, userCredentials.password).subscribe(() => {
       // Navigate to the home screen
-      this.user = this.userService.currentUser;
+      // this.user = this.userService.currentUser;
     });
   }
 
   logout(): void {
     this.authService.logout();
-    this.user = null;
+    // this.user = null;
   }
 }

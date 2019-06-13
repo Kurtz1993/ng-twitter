@@ -1,4 +1,4 @@
-<form #loginForm="ngForm" class="login-form" (submit)="login.emit(loginForm.value)">
+<form #loginForm="ngForm" class="login-form" (submit)="login(loginForm.value)">
   <h1>Login with your account</h1>
   <div class="form-group">
     <label for="email">Email</label>

@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -9,13 +9,17 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './components/home/home.component';
-import { AuthModule } from '@app/auth/auth.module';
+import { ErrorHandlerService } from '@app/services/error-handler.service';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
-  }
+    component: HomeComponent,
+  },
+  {
+    path: 'auth',
+    loadChildren: './auth/auth.module#AuthModule',
+  },
 ];
 
 @NgModule({
@@ -34,9 +38,8 @@ const routes: Routes = [
     }),
     SharedModule,
     RouterModule.forRoot(routes),
-    AuthModule
   ],
-  providers: [],
+  providers: [{ provide: ErrorHandler, useClass: ErrorHandlerService }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
