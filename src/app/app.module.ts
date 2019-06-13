@@ -10,7 +10,7 @@ import { NgxSimpleToastsModule } from '@kurtz1993/ngx-toasts';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { FeedModule } from '@app/feed/feed.module';
-import { HomeComponent, ProfilePicComponent } from './components';
+import { HomeComponent } from './components';
 import { ErrorHandlerService } from '@app/services/error-handler.service';
 
 const routes: Routes = [
@@ -25,7 +25,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ProfilePicComponent],
+  declarations: [AppComponent, HomeComponent],
   imports: [
     BrowserModule,
     CommonModule,

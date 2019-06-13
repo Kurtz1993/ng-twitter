@@ -1,3 +1,1 @@
-<p>
-  home works!
-</p>
+<app-feed [tweets]="tweets$ | async" (createTweet)="createTweet($event)"></app-feed>

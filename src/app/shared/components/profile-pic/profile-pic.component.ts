@@ -10,7 +10,15 @@ export class ProfilePicComponent implements OnInit {
   @HostBinding('class.round')
   round = false;
 
-  constructor() { }
+  @Input()
+  picture: string;
+
+  @Input()
+  size = 40;
+
+  get imgUrl(): string {
+    return `${this.picture}?s=${this.size}`;
+  }
 
   ngOnInit() {
   }

@@ -1,6 +1,6 @@
 <div>
-  <app-create-tweet></app-create-tweet>
+  <app-create-tweet (create)="createTweet.emit($event)"></app-create-tweet>
 </div>
 <div class="feed">
-
+  <app-tweet *ngFor="let tweet of tweets" [tweet]="tweet"></app-tweet>
 </div>

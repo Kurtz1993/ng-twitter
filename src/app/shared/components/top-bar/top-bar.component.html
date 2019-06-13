@@ -6,9 +6,10 @@
 <div class="user-profile">
   <div class="login-register" *ngIf="!user; else loggedIn">
     <a class="btn btn-link" [routerLink]="['/auth/login']">Login</a> /
-    <a class="btn btn-link" [routerLink]="['/auth/register']" >Register</a>
+    <a class="btn btn-link" [routerLink]="['/auth/register']">Register</a>
   </div>
   <ng-template #loggedIn>
+    <app-profile-pic [round]="true" [picture]="user.gravatar"></app-profile-pic>
     <a class="menu-item">{{ user.name }}</a>
     <button class="btn btn-link" (click)="logout.emit()">Logout</button>
   </ng-template>

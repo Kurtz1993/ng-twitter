@@ -1,9 +1,14 @@
 <div class="tweet">
   <div class="tweet__head">
-    <span class="tweet__author"></span>
-    <span class="tweet__timestamp"></span>
+    <app-profile-pic
+      [picture]="tweet.author?.gravatar"
+      [round]="true"
+      [size]="35"
+    ></app-profile-pic>
+    <span class="tweet__author">{{ tweet.author?.name }}</span>
+    <span class="tweet__timestamp">{{ tweet.createdAt | relativeDate }}</span>
   </div>
   <p class="tweet__body">
-
+    {{ tweet.body }}
   </p>
 </div>
