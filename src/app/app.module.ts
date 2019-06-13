@@ -5,12 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { JwtModule } from '@auth0/angular-jwt';
+import { NgxSimpleToastsModule } from '@kurtz1993/ngx-toasts';
 
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
+import { FeedModule } from '@app/feed/feed.module';
 import { HomeComponent } from './components/home/home.component';
 import { ErrorHandlerService } from '@app/services/error-handler.service';
-import { NgxSimpleToastsModule } from '@kurtz1993/ngx-toasts';
 
 const routes: Routes = [
   {
@@ -38,6 +39,7 @@ const routes: Routes = [
       },
     }),
     SharedModule,
+    FeedModule,
     RouterModule.forRoot(routes),
     NgxSimpleToastsModule,
   ],
