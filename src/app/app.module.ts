@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './components/home/home.component';
 import { ErrorHandlerService } from '@app/services/error-handler.service';
+import { NgxSimpleToastsModule } from '@kurtz1993/ngx-toasts';
 
 const routes: Routes = [
   {
@@ -38,6 +39,7 @@ const routes: Routes = [
     }),
     SharedModule,
     RouterModule.forRoot(routes),
+    NgxSimpleToastsModule,
   ],
   providers: [{ provide: ErrorHandler, useClass: ErrorHandlerService }],
   bootstrap: [AppComponent],
